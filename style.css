@@ -83,10 +83,15 @@ main {
   gap: 2.5rem;
 }
 
-main .hero {
+.hero {
+  overflow: clip;
   height: 171px;
-  width: 100%;
-  object-fit: cover;
+
+  > img {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
 }
 
 .main_text {
@@ -167,6 +172,23 @@ hr {
   & .row p:nth-child(2) {
     color: var(--color-rose-800);
     font-weight: 700;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 3rem 8rem; 
+  }
+  main {
+    margin: auto;
+    max-width: 616px;
+    padding: 2.5rem;
+    border-radius: 24px;
+  }
+
+  .hero {
+    border-radius: 12px;
+    height: 300px;
   }
 }
 
